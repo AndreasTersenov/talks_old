@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Test presentation</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/darkenergy.css" id="theme">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background-image="assets/Background-Euclid.jpeg">
+				<div class="container">
+					<div class="title" style="border-radius: 20px; background-color:rgba(0, 0, 0, 0.5);">
+						<h1>Mass mapping algorithms and peak count statistics</h1>
+						<h3>December 26th, 2023</h3>
+					</div>
+				</div>
+				<hr>
+				<div style="border-radius: 20px; background-color:rgba(0, 0, 0, 0);">
+					<div class="container">
+						<div class="col">
+							<div align="left" style="margin-left: 20px;">
+								<h2>Andreas Tersenov</h2>
+								<br>
+								<img src="/assets/ICS-for-print-en.png" class="plain" height="100"></img>
+								<br>
+							</div>
+						</div>
+
+						<div class="col">
+							<br>
+							<br>
+							<br>
+							<br>
+							<img src="/assets/logo-crete.png" class="plain" height="200"></img>
+						</div>
+
+						<div class="col">
+							<br>
+							<br>
+							<br>
+							<img src="/assets/CosmoStatDarkBK.png" class="plain" height="80"></img>
+						</div>
+					</div>
+					<div> slides at <a
+							href="https://github.com/AndreasTersenov/talks">github.com/AndreasTersenov/talks</a> </div>
+				</div>
+			</section>
+			<section>
+				<h2 class="slide-title">General Idea</h2>
+
+				Create a pipeline:
+				<img src="assets/pipeline_white2.png" class="plain" />
+				<ul>
+					<li>Use it on <b class="alert">UNIONS/CFIS</b> data to get observational constraints on
+						cosmology.</li>
+					<li>Use it to investigate the impact of <b class="alert">mass mapping algorithms</b> on
+						cosmology constraints.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3 class="slide-title">Weak Lensing</h3>
+				<div class="container">
+
+					<div class="col">
+						<ul>
+							<li><b class="alert">WL</b> = Observational technique in cosmology for studying the matter
+								distribution in the universe</li>
+							<li><b class="alert">Principle:</b>
+								deflection of light from distant galaxies by gravitational fields &rarr; causes image
+								distortion</li>
+							<li><b class="alert">Weak &rarr; </b> subtle & coherent distortions of background galaxy
+								shapes
+							</li>
+							<!-- add a space between this and the next bullets -->
+							<!-- <br class="extra-space"></li> -->
+						</ul>
+					</div>
+					<div class="col">
+						<img src="/assets/strong_vs_weak_lensing.png" class="plain" style="height: 300px;"></img>
+					</div>
+
+				</div>
+
+				<div class="block">
+					<div class="block-content">
+						<ul style="list-style-type: square">
+							<li>WL provides a <span style="color: #90EE90;">direct measurement of the gravitational
+									distortion</span>.</li>
+							<li>WL enables us to <span style="color: #90EE90;">probe the cosmic structure</span>, <span
+									style="color: #90EE90;">investigate the nature of dark matter</span>, and
+								<span style="color: #90EE90;">constrain cosmological parameters</span>.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h3 class="slide-title"> Shear & Convergence</h3>
+				<img src="assets/WL_distortions.png" alt="Weak Lensing Distortions" style="width:auto" ; height="300">
+				<div class="container">
+					<div class="col">
+						<div class="block">
+							<div class="block-title" style="text-align: center;">Convergence $\kappa$ 
+							</div>
+							<div class="block-content">
+								$$ \kappa = \frac{1}{2} (\partial_1 \partial_1 + \partial_2 \partial_2) \psi = \frac12
+								\nabla^2 \psi $$
+
+								<p style="text-align: center;"> &xrarr; <span style="color: red"> difficult to measure
+									</span> </p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="block">
+							<div class="block-title" style="text-align: center;">Shear $\gamma$ 
+							</div>
+							<div class="block-content">
+								$$ \gamma_1 = \frac{1}{2} (\partial_1 \partial_1 - \partial_2 \partial_2) \psi, \,\,
+								\gamma_2 = \partial_1 \partial_2 \psi $$
+								<p style="text-align: center;"> &xrarr; can be measured by statistical analysis of
+									galaxy shapes </p>
+							</div>
+						</div>
+					</div>
+			</section>
+
+
+			<section> <h3 class="slide-title">Test Slide</h3> Slide 1</section>
+			<section data-transition="zoom" data-transition-time="slow">Slide 2</section>
+			<section>Slide 3
+				<aside class="notes">
+					Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if
+					you
+					open the
+					speaker notes window (hit 's' on your keyboard).
+				</aside>
+			</section>
+			<section data-background-image="https://picsum.photos/id/237/2000"></section>
+			<section data-state="make-it-pop">Make it pop</section>
+			<section data-markdown>
+				<textarea data-template>
+					## Page title
+
+					A paragraph with some text and a [link](http://hakim.se).
+
+					---
+					
+					## Another page title
+					
+					---
+					
+					> A block quote
+
+					$E=mc^2$
+
+					$\frac{1}{n} \sum_{i=1}^{n}x_{i}$
+
+					$\dot{x} = \sigma(y-x)$
+					</textarea>
+			</section>
+			<section>
+				<section>Vertical Slide 1</section>
+				<section>Vertical Slide 2</section>
+			</section>
+			<section data-background-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4"
+				data-background-video-loop>
+				<h2>Background Video</h2>
+			</section>
+
+		</div>
+	</div>
+
+	<style>
+		/* .reveal .slides {
+			border: 5px solid red;
+			min-height: 100%;
+			width: 128mm;
+			height: 96mm;
+		} */
+
+		.reveal .block {
+			background-color: #191919;
+			margin-left: 20px;
+			margin-right: 20px;
+			text-align: left;
+			padding-bottom: 0.1em;
+		}
+
+		.reveal .block-title {
+			background-color: #333333;
+			padding: 8px 35px 8px 14px;
+			color: #FFAA7F;
+			font-weight: bold;
+		}
+
+		.reveal .block-content {
+			padding: 8px 35px 8px 14px;
+		}
+
+		.reveal .slide-title {
+			border-left: 5px solid white;
+			text-align: left;
+			margin-left: 20px;
+			padding-left: 20px;
+		}
+
+		.reveal .alert {
+			color: #FFAA7F;
+			font-weight: bold;
+		}
+
+		.reveal .inverted {
+			filter: invert(100%);
+		}
+	</style>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/math/math.js"></script>
+
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			controls: true,
+			hash: true,
+			controlsBackArrows: 'faded',
+			progress: true,
+			slideNumber: true,
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			width: 1280,
+			height: 720,
+
+			margin: 0.1,
+
+			minScale: 0.2,
+			maxScale: 1.5,
+
+
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath],
+
+			dependencies: [{
+				src: 'reveal.js/plugin/markdown/marked.js'
+			},
+			{
+				src: 'reveal.js/plugin/markdown/markdown.js'
+			},
+			{
+				src: 'reveal.js/plugin/notes/notes.js',
+				async: true
+			},
+			{
+				src: 'reveal.js/plugin/math/math.js',
+				async: true
+			},
+			{
+				src: 'reveal.js/plugin/reveal.js-d3/reveald3.js'
+			},
+			{
+				src: 'reveal.js/plugin/reveal.js-plugins/chart/Chart.min.js'
+			},
+			{
+				src: 'reveal.js/plugin/reveal.js-plugins/chart/csv2chart.js'
+			},
+			{
+				src: 'reveal.js/plugin/highlight/highlight.js',
+				async: true
+			},
+			]
+		});
+	</script>
+</body>
+
+</html>
